@@ -1,3 +1,11 @@
 ** Group Members: 
 Michele Persaud, Ian Scheffler, Emma Wingreen
 
+*** Update: 1/23/22
+- Drafted an EXTREMELY simple sentence generator
+- This one is very basic, in that text is already pre-broken into parts of speech
+- The program randomly selects a part of speech and concatenates it with others
+- There's no ML-predicability of what comes next in the sentence
+- We'll try creating/adding more ML-infused models (a chatbot?) 
+- This might serve as a "basic" or "starter" example! 
+
