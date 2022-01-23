@@ -1,6 +1,10 @@
 # This is designed to be the SIMPLEST possible sentence generator
 # Since it doesn't use any ML techniques
 # Maybe we can use this as a basic demo?
+# Note: I think we might be able to make this into a code skeleton, fro a quick in-class
+# assignment--obviously, you could make a more elegant version even of this,
+# with loops and list comprehensions and data input, etc., etc.
+# In other words, we'll have to be picky about what skills we specifically target! 
 import random
 import time
 # Below is the 'corpus' (I hesitate to use that word since this is so limited)
