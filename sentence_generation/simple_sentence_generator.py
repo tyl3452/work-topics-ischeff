@@ -10,3 +10,13 @@ secondWord = ["apple", "carrot", "rabbit"]
 thirdWord = ["began", "started"]
 fourthWord = ["to cook", "to sink", "to swim"]
 fifthWord = ["quickly", "slowly", "rapidly"]
+# Now, we randomly choose a word from each list! (Since the list are pre-broken down into
+# related clusters--there are better terms for this--it obviously simplifies things further.)
+a = random.choice(firstWord)
+b = random.choice(secondWord)
+c = random.choice(thirdWord)
+d = random.choice(fourthWord)
+e = random.choice(fifthWord)
+# Now, we very crudely combine the words together!
+sentence = a + " " + b + " " + c + " " + d + " " + e + "."
+print(sentence)
