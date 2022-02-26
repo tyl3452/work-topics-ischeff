@@ -1,28 +1,37 @@
 import random
 
-articles = ["A", "The", "One", "Some"]
+articles = ["a", "the", "one", "some"]
 nouns = ["apple", "carrot", "rabbit", "banana", "basketball", "chess", "sun", "wind"]
 verbs = ["cooks", "blows", "bounces", "walks", "jumps", "calls", "stays", "runs", "abides"]
+conjunctions = ["for", "and", "nor", "but", "yet", "so"]
+dependent_clause_markers = ["although", "even if", "until", "when", "whether", "while", "in order to"]
+
+def independent_clause():
+    return random.choice(articles) + " " + random.choice(nouns) + " " + random.choice(verbs)
+
+def dependent_clause():
+    return random.choice(dependent_clause_markers) + " " + independent_clause()
 
 def simple_sentence():
-    sentence = random.choice(articles) + " " + random.choice(nouns) + " " + random.choice(verbs) + "."
-    return sentence
+    return independent_clause() + "."
 
 # def compound_sentence():
-#     # add code here to generate a compound sentence
 #
 # def complex_sentence():
-#     # add code here to generate a complex sentence
 #
 # def compound_complex_sentence():
-#     # add code here to generate a compound-complex sentence
+#
 
 if __name__ == "__main__":
-    simple_sentence = simple_sentence()
-    print(simple_sentence)
+    #test print for simple sentence
+    sentence = simple_sentence()
+    print(sentence)
+    # #test print for compound sentence
     # compound_sentence = compound_sentence()
     # print(compound_sentence)
+    # #test print for complex sentence
     # complex_sentence = complex_sentence()
     # print(complex_sentence)
+    # #test print for compound-complex sentence
     # compound_complex_sentence = compound_complex_sentence()
-    # print(compound_sentence)
+    # print(compound_complex_sentence)
