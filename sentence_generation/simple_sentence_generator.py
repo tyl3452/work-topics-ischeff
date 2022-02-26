@@ -1,26 +1,36 @@
-# This is designed to be the SIMPLEST possible sentence generator
-# Since it doesn't use any ML techniques
-# Maybe we can use this as a basic demo?
-# Note: I think we might be able to make this into a code skeleton, fro a quick in-class
-# assignment--obviously, you could make a more elegant version even of this,
-# with loops and list comprehensions and data input, etc., etc.
-# In other words, we'll have to be picky about what skills we specifically target! 
+# This is designed to be done with elementary/middle school students
+# especially in the context of an ELA lesson (since we never do enough grammar!)
+
+# There are only seven types of sentences in the English language: one simple, three compound
+# two complex, and one compound-complex. (You can see definitions here: https://www.dailywritingtips.com/7-patterns-of-sentence-structure/)
+
+# The goal of this lab is to generate a sentence by randomly picking the elements of a given sentence structure.
+
 import random
-import time
-# Below is the 'corpus' (I hesitate to use that word since this is so limited)
-# of words that the model can draw on. The model has five words.
-article = ["A", "The", "One"]
-noun = ["apple", "carrot", "rabbit"]
-verb = ["began", "started"]
-verb1 = ["to cook", "to sink", "to swim", "to fly", "to speak"]
-adverb = ["quickly", "slowly", "rapidly"]
-# Now, we randomly choose a word from each list! (Since the list are pre-broken down into
-# related clusters--there are better terms for this--it obviously simplifies things further.)
-a = random.choice(article)
-b = random.choice(noun)
-c = random.choice(verb)
-d = random.choice(verb1)
-e = random.choice(adverb)
-# Now, we very crudely combine the words together!
-sentence = a + " " + b + " " + c + " " + d + " " + e + "."
-print(sentence)
+
+articles = ["A", "The", "One", "Some"]
+nouns = ["apple", "carrot", "rabbit", "banana", "basketball", "chess", "sun", "wind"]
+verbs = ["cooks", "blows", "bounces", "walks", "jumps", "calls", "stays", "runs", "abides"]
+
+def simple_sentence():
+    sentence = random.choice(articles) + " " + random.choice(nouns) + " " + random.choice(verbs) + "."
+    return sentence
+
+# def compound_sentence():
+#     # add code here to generate a compound sentence
+#
+# def complex_sentence():
+#     # add code here to generate a complex sentence
+#
+# def compound_complex_sentence():
+#     # add code here to generate a compound-complex sentence
+
+if __name__ == "__main__":
+    simple_sentence = simple_sentence()
+    print(simple_sentence)
+    # compound_sentence = compound_sentence()
+    # print(compound_sentence)
+    # complex_sentence = complex_sentence()
+    # print(complex_sentence)
+    # compound_complex_sentence = compound_complex_sentence()
+    # print(compound_sentence)
