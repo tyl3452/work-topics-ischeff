@@ -16,11 +16,11 @@ def simple_sentence():
     return independent_clause() + "."
 
 # def compound_sentence():
-#
+#     # add code here
 # def complex_sentence():
-#
+#     # add code here
 # def compound_complex_sentence():
-#
+#     # add code here
 
 if __name__ == "__main__":
     #test print for simple sentence
