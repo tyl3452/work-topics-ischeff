@@ -1,11 +1,3 @@
-# This is designed to be done with elementary/middle school students
-# especially in the context of an ELA lesson (since we never do enough grammar!)
-
-# There are only seven types of sentences in the English language: one simple, three compound
-# two complex, and one compound-complex. (You can see definitions here: https://www.dailywritingtips.com/7-patterns-of-sentence-structure/)
-
-# The goal of this lab is to generate a sentence by randomly picking the elements of a given sentence structure.
-
 import random
 
 articles = ["A", "The", "One", "Some"]
