@@ -62,4 +62,3 @@ WHERE coursesection LIKE "M%"
 GROUP BY coursesection
 ORDER BY total DESC
 ```
-above gets all teachers from all course sections - need to be just math
