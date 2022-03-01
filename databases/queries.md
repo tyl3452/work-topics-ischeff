@@ -14,6 +14,22 @@ ORDER BY s.last ASC
 
 # Async Work:
 
+## SQL Challenge 1 (Intermediate):
+
+Write a SQL Query that retrieves the following records: https://drive.google.com/file/d/1kbkE8PFhoTU2ggG6zg1O3iOYoIk4w7Zh/view?usp=sharing Write a query using the allCuts table to retrieve the list of all teachers whose classes are cut most often.
+
+```sql
+SELECT teacher, COUNT(teacher) as total
+FROM (SELECT s.*,p.date,p.coursesection, p.attendance,p.teacher,p.period
+FROM scan AS s
+INNER JOIN periodAtt as p
+ON s.studentID=p.studentID AND SUBSTR(s.scantime, 1, 9)=p.date
+WHERE p.attendance = "A"
+ORDER BY s.last ASC) AS allcuts
+GROUP BY teacher
+ORDER BY total DESC
+```
+
 ## SQL Challenge 2 (Easy):
 
 Write a SQL Query that retrieves the following records: https://drive.google.com/file/d/1hvChuoJ3_IbeP9j93Q2g82hfQSdkfcdr/view?usp=sharing Use the allCuts table and the biographical table to retrieve a list of student cuts with outreach information sorted by guidance counselor. Skills
