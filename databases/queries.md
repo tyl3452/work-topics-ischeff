@@ -13,3 +13,19 @@ ORDER BY s.last ASC
 ```
 
 # Async Work:
+
+## SQL Challenge 2 (Easy):
+
+Write a SQL Query that retrieves the following records: https://drive.google.com/file/d/1hvChuoJ3_IbeP9j93Q2g82hfQSdkfcdr/view?usp=sharing Use the allCuts table and the biographical table to retrieve a list of student cuts with outreach information sorted by guidance counselor. Skills
+```sql
+SELECT allcuts.*,b.parent1phone,b.parent2phone,b.parentemail
+FROM (SELECT s.first, s.last, s.studentID,s.grade,s.scantime, s.status,p.date,p.coursesection, p.attendance,p.teacher,p.period
+FROM scan AS s
+INNER JOIN periodAtt as p
+ON s.studentID=p.studentID AND SUBSTR(s.scantime, 1, 9)=p.date
+WHERE p.attendance = "A"
+ORDER BY s.last ASC) AS allcuts
+LEFT JOIN bio as b
+ON allcuts.studentID = b.studentID
+ORDER BY allcuts.teacher ASC
+```
