@@ -57,16 +57,16 @@ def generate_text(model, state_size, min_length):
 if __name__ == "__main__":
     body = input('drake.txt')
     print(body)
-    model = build_markov(body,10)#this seems to be making a model based on characters, not words
+    model = build_markov(body,10)
     print(model)
     print(generate_text(model,10,100))
     # body = input('beatles.txt')
     # print(body)
-    # model = build_markov(body,2)#this seems to be making a model based on characters, not words
+    # model = build_markov(body,2)
     # print(model)
     # print(generate_text(model,2,100))
     # body = input('adele.txt')
     # print(body)
-    # model = build_markov(body,2)#this seems to be making a model based on characters, not words
+    # model = build_markov(body,2)
     # print(model)
     # print(generate_text(model,2,100))
