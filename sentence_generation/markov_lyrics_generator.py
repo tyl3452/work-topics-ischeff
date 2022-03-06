@@ -1,5 +1,5 @@
-# hat-tip to Liam Baum and Healey Codes, who have both implemented Markov Chains in ways that proved invaluable to our group! 
-# You can find Liam's (super awesome) lyric generator here:
+# hat-tip to Liam Baum and Andrew Healey, a British software engineer, who have both implemented Markov Chains in ways that proved invaluable to our group! 
+# You can find Liam's (super awesome) lyric generator here on his repo: https://github.com/hunter-teacher-cert/work_csci70900-mrbombmusic/tree/master/ds/markov
 # And Healey Codes version here: https://github.com/healeycodes/markov-chain-generator
 
 import random
@@ -33,7 +33,7 @@ def build_markov(corpus, state_size):
     return markov
 
 
-# This function takes as input a Markov model (in the form of a dictionary), the state size, and the minimum number of words you want to generate.
+# This function takes as input a Markov model (in the form of a dictionary), the state size, and the maximum number of words you want to generate.
 # It returns a string that (hopefully) sounds like the text input into the model! 
 def generate_text(model, state_size, min_length):
 
@@ -54,17 +54,17 @@ def generate_text(model, state_size, min_length):
         next_word = random.choice(model[key])
         text.append(next_word)
         i += 1
-        if i > min_length and text[-1][-1] == '.':
+        if i == max_length: # This stops the program when you reach the max length you input as a parameter
             break
     return ' '.join(text)
 
 # This is like "main" in java - here is where we run the program by calling the functions
 if __name__ == "__main__":
     body = input('drake.txt')
-    print(body)
-    model = build_markov(body,10)
-    print(model)
-    print(generate_text(model,10,100))
+#     print(body)
+    model = build_markov(body,2)
+#     print(model)
+    print(generate_text(model,2,100))
     # body = input('beatles.txt')
     # print(body)
     # model = build_markov(body,2)
