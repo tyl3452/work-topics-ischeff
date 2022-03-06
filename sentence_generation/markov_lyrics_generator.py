@@ -1,3 +1,7 @@
+# hat-tip to Liam Baum and Andrew Healey, a British software engineer, who have both implemented Markov Chains in ways that proved invaluable to our group!
+# You can find Liam's (super awesome) lyric generator here on his repo: https://github.com/hunter-teacher-cert/work_csci70900-mrbombmusic/tree/master/ds/markov
+# And Healey Codes version here: https://github.com/healeycodes/markov-chain-generator
+
 import random
 
 # This function handles input by opening a file and returning it as a string
@@ -33,7 +37,8 @@ def build_markov(corpus, state_size):
 # It returns a string that (hopefully) sounds like the text input into the model!
 def generate_text(model, state_size, max_length):
 
-    #P
+    # This function picks a new starting word or phrase, by picking a random capitalized word
+    # Obviously, this assumes that lines start with capital letters, which is not always the case
     def get_new_starter():
         return random.choice([s.split(' ') for s in model.keys() if s[0].isupper()])
     text = get_new_starter()
