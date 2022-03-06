@@ -1,10 +1,21 @@
-#get input - use your own song lyrics!
 import random
+
+# This function handles input by opening a file and returning it as a string
 def input(text):
     with open(text) as f:
         corpus = f.read()
     return corpus
 
+# This function takes as inputs your corpus (a string of text) and the state size and returns a dictionary that is a Markov model of the corpus
+
+    # Here, state size is another way of saying the "n" in "n-gram": 
+    
+        # If state size is 1, the model will build a dictionary in which each word in the corpus
+        # is a key, and the words that follows a given word--anywhere in the corpus--are the values. 
+        
+        # If state size is 2, the model will build a dictionary in which each pair of words in the corpus
+        # is a key, and the words that follows that pair are the keys. 
+        
 def build_markov(corpus, state_size):
     corpus = corpus.split()#split the string input into a list of words
     markov = {}#create an empty dictionary to hold the model - keys and values are words
@@ -17,9 +28,12 @@ def build_markov(corpus, state_size):
             markov[previous_words] = [current_word]
     return markov
 
+
+# This function takes as input a Markov model (in the form of a dictionary), the state size, and the minimum number of words you want to generate.
+# It returns a string that (hopefully) sounds like the text input into the model! 
 def generate_text(model, state_size, min_length):
 
-    #Let's assume that each line starts with a capital letter
+    #P
     def get_new_starter():
         return random.choice([s.split(' ') for s in model.keys() if s[0].isupper()])
     text = get_new_starter()
@@ -39,6 +53,7 @@ def generate_text(model, state_size, min_length):
             break
     return ' '.join(text)
 
+# This is like "main" in java - here is where we run the program by calling the functions
 if __name__ == "__main__":
     body = input('drake.txt')
     print(body)
