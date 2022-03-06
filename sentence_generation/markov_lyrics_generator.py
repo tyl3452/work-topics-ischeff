@@ -1,3 +1,7 @@
+# hat-tip to Liam Baum and Healey Codes, who have both implemented Markov Chains in ways that proved invaluable to our group! 
+# You can find Liam's (super awesome) lyric generator here:
+# And Healey Codes version here: https://github.com/healeycodes/markov-chain-generator
+
 import random
 
 # This function handles input by opening a file and returning it as a string
@@ -70,3 +74,5 @@ if __name__ == "__main__":
     # model = build_markov(body,2)
     # print(model)
     # print(generate_text(model,2,100))
+    
+  
