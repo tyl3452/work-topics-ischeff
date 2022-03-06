@@ -2,9 +2,7 @@
 import random
 def input(text):
     with open(text) as f:
-        # corpus = f.readlines()
         corpus = f.read()
-        # corpus.split("\n")
     return corpus
 
 def build_markov(corpus, state_size):
