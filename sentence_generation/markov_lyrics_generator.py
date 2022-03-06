@@ -37,7 +37,8 @@ def build_markov(corpus, state_size):
 # It returns a string that (hopefully) sounds like the text input into the model! 
 def generate_text(model, state_size, min_length):
 
-    #P
+    # This function picks a new starting word or phrase, by picking a random capitalized word
+    # Obviously, this assumes that lines start with capital letters, which is not always the case
     def get_new_starter():
         return random.choice([s.split(' ') for s in model.keys() if s[0].isupper()])
     text = get_new_starter()
