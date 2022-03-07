@@ -19,10 +19,14 @@ def compound_sentence():
     return independent_clause() + " " + random.choice(conjunctions) + " " + independent_clause()
 
 
-# def complex_sentence():
-#     # add code here
-# def compound_complex_sentence():
-#     # add code here
+def complex_sentence():
+     # add code here
+     return dependent_clause() + " " + random.choice(conjunction) + " " + independent_clause()
+        
+        
+def compound_complex_sentence():
+     # add code here
+     return dependent_clause() + " " + random.choice(conjunctions) + " " + independent_clause() + " " + random.choice(conjunctions) + " " + independent_clause()
 
 if __name__ == "__main__":
     #test print for simple sentence
