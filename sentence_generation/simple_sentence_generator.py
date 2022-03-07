@@ -15,8 +15,10 @@ def dependent_clause():
 def simple_sentence():
     return independent_clause() + "."
 
-# def compound_sentence():
-#     # add code here
+def compound_sentence():
+    return independent_clause() + " " + random.choice(conjunctions) + " " + independent_clause()
+
+
 # def complex_sentence():
 #     # add code here
 # def compound_complex_sentence():
